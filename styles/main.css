@@ -138,6 +138,7 @@
   background-color: #FB9902;
   left: 50%;
   rotate: 180deg;
+  display: none;
 }
 
 .game-page-players {

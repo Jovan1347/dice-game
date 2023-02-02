@@ -32,14 +32,13 @@ function clearInput() {
 function addNumber() {
   let diceNumber = dice();
   if (currentPlayer === 1) {
-    activePlayer1.style.display = "unset";
-    activePlayer2.style.display = "none";
-
     player1Dice.setAttribute(
       "src",
       `/images/game-page/dices/dice${diceNumber}.png`
     );
     if (diceNumber === 1) {
+      activePlayer1.style.display = "none";
+      activePlayer2.style.display = "unset";
       current1 = 0;
       currentElement1.innerHTML = "CURRENT: ";
       currentPlayer = 2;
@@ -48,14 +47,14 @@ function addNumber() {
       currentElement1.innerHTML = `CURRENT: ${current1}`;
     }
   } else {
-    activePlayer1.style.display = "none";
-    activePlayer2.style.display = "unset";
-
     player2Dice.setAttribute(
       "src",
       `/images/game-page/dices/dice${diceNumber}.png`
     );
     if (diceNumber === 1) {
+      activePlayer1.style.display = "unset";
+      activePlayer2.style.display = "none";
+
       current2 = 0;
       currentElement2.innerHTML = " :CURRENT";
       currentPlayer = 1;
@@ -92,12 +91,16 @@ store.addEventListener("click", () => {
   player1Dice.setAttribute("src", ``);
   player2Dice.setAttribute("src", ``);
   if (currentPlayer === 1) {
+    activePlayer1.style.display = "none";
+    activePlayer2.style.display = "unset";
     currentStore1 += current1;
     storeElement1.innerHTML = `SCORE: ${currentStore1}`;
     currentElement1.innerHTML = "CURRENT: ";
     current1 = 0;
     currentPlayer = 2;
   } else {
+    activePlayer1.style.display = "unset";
+    activePlayer2.style.display = "none";
     currentStore2 += current2;
     storeElement2.innerHTML = `${currentStore2} :SCORE`;
     currentElement2.innerHTML = " :CURRENT";
