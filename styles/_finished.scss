@@ -1,0 +1,44 @@
+@import "./colors";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+.game-winner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    display: none;
+
+    p {
+        font-size: 6em;
+        font-family: 'Rubik Glitch', cursive;
+        padding: 20px;
+        color: $player-name-text-color;
+        text-shadow: black 10px 10px 10px;
+    }
+
+    button {
+        border-radius: 10px;
+        border: none;
+        width: 30%;
+        min-width: 300px;
+        height: 100px;
+        background-color: $input-field-backgorund-color;
+        color: $player-name-text-color;
+        font-size: 2em;
+        font-family: 'Rubik Glitch', cursive;
+        box-shadow: black 10px 10px 10px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    button:hover {
+        scale: 1.1;
+        --webkit-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+        -moz-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+        box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+        transition: 0.3s;
+    }
+
+}

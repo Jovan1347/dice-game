@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+.main-background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.main-background svg {
+  width: 100%;
+}
+
+.home-page {
+  font-family: "Rubik Glitch", cursive;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.home-page-heading {
+  display: flex;
+  flex-direction: column;
+  font-size: 5em;
+  color: #FB9902;
+  align-items: center;
+  text-shadow: black 10px 10px 10px;
+}
+.home-page-heading img {
+  width: 150px;
+}
+
+.home-page-player-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  width: 100%;
+  height: 40%;
+}
+
+.home-page-name {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+.home-page-name p {
+  font-size: 3em;
+  font-family: "Rubik Glitch", cursive;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #FEFE33;
+  text-shadow: black 10px 10px 10px;
+}
+.home-page-name input {
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  min-width: 300px;
+  height: 50px;
+  background-color: #000000;
+  box-shadow: black 10px 10px 10px;
+  font-size: 2em;
+  font-family: "Rubik Glitch", cursive;
+  color: #FEFE33;
+  text-align: center;
+}
+.home-page-name input:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.home-page-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-page-start p {
+  font-size: 3em;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #FB9902;
+  text-shadow: black 10px 10px 10px;
+}
+.home-page-start button {
+  border-radius: 10px;
+  border: none;
+  width: 50%;
+  min-width: 300px;
+  height: 50px;
+  background-color: #000000;
+  color: #FEFE33;
+  font-size: 1em;
+  box-shadow: black 10px 10px 10px;
+  z-index: 1;
+  font-family: "Rubik Glitch", cursive;
+  font-size: 2em;
+  cursor: pointer;
+}
+.home-page-start button:hover {
+  scale: 1.1;
+  --webkit-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+  box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+  transition: 0.3s;
+}
+
+.game-page {
+  font-family: "Rubik Glitch", cursive;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+
+.game-page-active-player1 {
+  position: absolute;
+  -webkit-clip-path: polygon(75% 0, 0 50%, 75% 100%);
+          clip-path: polygon(75% 0, 0 50%, 75% 100%);
+  width: 100px;
+  height: 100px;
+  background-color: #FB9902;
+  right: 50%;
+}
+
+.game-page-active-player2 {
+  position: absolute;
+  -webkit-clip-path: polygon(75% 0, 0 50%, 75% 100%);
+          clip-path: polygon(75% 0, 0 50%, 75% 100%);
+  width: 100px;
+  height: 100px;
+  background-color: #FB9902;
+  left: 50%;
+  rotate: 180deg;
+}
+
+.game-page-players {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.game-page-player1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+.game-page-player1 p {
+  font-size: 3em;
+  font-family: "Rubik Glitch", cursive;
+  padding: 20px;
+  color: #FEFE33;
+  text-shadow: black 10px 10px 10px;
+}
+.game-page-player1 .player-name {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+.game-page-player1 .player-name p {
+  position: absolute;
+  text-align: center;
+  top: -150px;
+}
+.game-page-player1 .player-name img {
+  width: 200px;
+}
+.game-page-player1 .player-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  z-index: 1;
+}
+
+.game-page-player2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+.game-page-player2 p {
+  font-size: 3em;
+  font-family: "Rubik Glitch", cursive;
+  padding: 20px;
+  color: #FEFE33;
+  text-shadow: black 10px 10px 10px;
+}
+.game-page-player2 .player-name {
+  position: relative;
+  display: flex;
+  width: 40%;
+  justify-content: center;
+}
+.game-page-player2 .player-name p {
+  position: absolute;
+  text-align: center;
+  top: -150px;
+}
+.game-page-player2 .player-name img {
+  width: 200px;
+}
+.game-page-player2 .player-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: right;
+  bottom: 150px;
+  right: 0;
+  z-index: 1;
+}
+.game-page-player2 .player-info .player-score {
+  display: flex;
+  justify-content: right;
+}
+.game-page-player2 .player-info .player-current {
+  display: flex;
+  justify-content: right;
+}
+
+.player-divide {
+  width: 10px;
+  height: 100%;
+  background-color: #FB9902;
+  box-shadow: 0px 0px 105px 20px rgba(251, 151, 2, 0.9);
+  border-radius: 5px;
+}
+
+.game-page-actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 70%;
+}
+.game-page-actions button {
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  width: 50%;
+  min-width: 300px;
+  height: 50px;
+  background-color: #000000;
+  color: #FEFE33;
+  font-size: 1.25em;
+  text-shadow: black 10px 10px 10px;
+  z-index: 1;
+  font-family: "Rubik Glitch", cursive;
+  font-size: 2em;
+}
+.game-page-actions button:hover {
+  scale: 1.1;
+  --webkit-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+  box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+  transition: 0.3s;
+}
+
+.countdown {
+  font-family: "Rubik Glitch", cursive;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.countdown span {
+  font-size: 6em;
+  padding: 20px;
+  color: #FEFE33;
+}
+
+.game-winner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  display: none;
+}
+.game-winner p {
+  font-size: 6em;
+  font-family: "Rubik Glitch", cursive;
+  padding: 20px;
+  color: #FEFE33;
+  text-shadow: black 10px 10px 10px;
+}
+.game-winner button {
+  border-radius: 10px;
+  border: none;
+  width: 30%;
+  min-width: 300px;
+  height: 100px;
+  background-color: #000000;
+  color: #FEFE33;
+  font-size: 2em;
+  font-family: "Rubik Glitch", cursive;
+  box-shadow: black 10px 10px 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+.game-winner button:hover {
+  scale: 1.1;
+  --webkit-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+  box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+  transition: 0.3s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #700CBC;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+@import "./colors";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+.countdown {
+    font-family: 'Rubik Glitch', cursive;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    span {
+
+        font-size: 6em;
+        padding: 20px;
+        color: $player-name-text-color;
+
+    }
+}
