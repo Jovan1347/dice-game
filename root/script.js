@@ -79,6 +79,7 @@ startButton.addEventListener("click", () => {
       clearInterval(startTimer);
     }
   }, 1000);
+
   document.querySelector(".player1-name").innerHTML =
     "Player 1:  " + name1.value;
   document.querySelector(".player2-name").innerHTML =

@@ -31,14 +31,30 @@
         box-shadow: black 10px 10px 10px;
         z-index: 1;
         cursor: pointer;
+        animation: buttonPulse 2s infinite linear;
     }
 
-    button:hover {
+}
+
+@keyframes buttonPulse {
+    0% {
         scale: 1.1;
         --webkit-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
         -moz-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
         box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
-        transition: 0.3s;
     }
 
+    50% {
+        scale: 1;
+        -webkit-box-shadow: 0px 0px 105px 15px rgba(45, 255, 196, 0.9);
+        -moz-box-shadow: 0px 0px 105px 15px rgba(45, 255, 196, 0.9);
+        box-shadow: 0px 0px 105px 15px rgba(45, 255, 196, 0.9);
+    }
+
+    100% {
+        scale: 1.1;
+        --webkit-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+        -moz-box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+        box-shadow: 0px 0px 105px 35px rgba(45, 255, 196, 0.9);
+    }
 }
