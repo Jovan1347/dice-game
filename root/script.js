@@ -1,14 +1,14 @@
 let dice = () => Math.floor(Math.random() * 6 + 1);
 let currentElement1 = document.querySelector(".player-current-add1");
 let currentElement2 = document.querySelector(".player-current-add2");
-let storeElement1 = document.querySelector(".player-score-add1");
-let storeElement2 = document.querySelector(".player-score-add2");
+let scoreElement1 = document.querySelector(".player-score-add1");
+let scoreElement2 = document.querySelector(".player-score-add2");
 let player1Dice = document.querySelector("#player1-dice");
 let player2Dice = document.querySelector("#player2-dice");
 let activePlayer1 = document.querySelector(".game-page-active-player1");
 let activePlayer2 = document.querySelector(".game-page-active-player2");
-let name1 = document.getElementById("name1");
-let name2 = document.getElementById("name2");
+let inputName1 = document.getElementById("name1");
+let inputName2 = document.getElementById("name2");
 let roll = document.querySelector(".roll");
 let store = document.querySelector(".store");
 let startButton = document.querySelector(".start-button");
@@ -17,12 +17,12 @@ let playAgainButton = document.querySelector(".start-again");
 let currentPlayer = 1;
 let current1 = 0;
 let current2 = 0;
-let currentStore1 = 0;
-let currentStore2 = 0;
+let currentScore1 = 0;
+let currentScore2 = 0;
 
 function clearInput() {
-  if (name1.value != "") {
-    name1.value = "";
+  if (inputName1.value != "") {
+    inputName1.value = "";
   }
   if (name2.value != "") {
     name2.value = "";
@@ -81,7 +81,7 @@ startButton.addEventListener("click", () => {
   }, 1000);
 
   document.querySelector(".player1-name").innerHTML =
-    "Player 1:  " + name1.value;
+    "Player 1:  " + inputName1.value;
   document.querySelector(".player2-name").innerHTML =
     "Player 2:  " + name2.value;
 });
@@ -94,26 +94,26 @@ store.addEventListener("click", () => {
   if (currentPlayer === 1) {
     activePlayer1.style.display = "none";
     activePlayer2.style.display = "unset";
-    currentStore1 += current1;
-    storeElement1.innerHTML = `SCORE: ${currentStore1}`;
+    currentScore1 += current1;
+    scoreElement1.innerHTML = `SCORE: ${currentScore1}`;
     currentElement1.innerHTML = "CURRENT: ";
     current1 = 0;
     currentPlayer = 2;
   } else {
     activePlayer1.style.display = "unset";
     activePlayer2.style.display = "none";
-    currentStore2 += current2;
-    storeElement2.innerHTML = `${currentStore2} :SCORE`;
+    currentScore2 += current2;
+    scoreElement2.innerHTML = `${currentScore2} :SCORE`;
     currentElement2.innerHTML = " :CURRENT";
     current2 = 0;
     currentPlayer = 1;
   }
 
-  if (currentStore1 >= 50) {
+  if (currentScore1 >= 50) {
     document.querySelector(".game-page").style.display = "none";
     document.querySelector(".game-winner").style.display = "flex";
   }
-  if (currentStore2 >= 50) {
+  if (currentScore2 >= 50) {
     document.querySelector(".game-page").style.display = "none";
     document.querySelector(".game-winner").style.display = "flex";
   }
@@ -123,13 +123,13 @@ playAgainButton.addEventListener("click", () => {
   document.querySelector(".game-page").style.display = "none";
   document.querySelector(".game-winner").style.display = "none";
   document.querySelector(".home-page").style.display = "flex";
-  storeElement1.innerHTML = "SCORE: ";
+  scoreElement1.innerHTML = "SCORE: ";
   currentElement1.innerHTML = "CURRENT: ";
   player1Dice.setAttribute("src", ``);
   player2Dice.setAttribute("src", ``);
   clearInput();
   current1 = 0;
-  currentStore1 = 0;
+  currentScore1 = 0;
   current2 = 0;
-  currentStore2 = 0;
+  currentScore2 = 0;
 });
